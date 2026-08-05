@@ -1,11 +1,10 @@
-package leetCode.LinkedList;
+package LinkedList.DoublyLinkedList;
 
 public class ListNode {
-    ListNode next;
+    leetCode.LinkedList.ListNode next;
     int data;
     public ListNode(int data){
         this.data=data;
         this.next=null;
     }
-
 }
