@@ -1,6 +1,6 @@
 package LinkedList.DoublyLinkedList;
 
-public class DoubleLLoperations {
+public class DoubleLLInsertionOperations {
     private ListNode head;
     private ListNode tail;
     int size;
@@ -91,7 +91,7 @@ public class DoubleLLoperations {
    }
 
     public static void main(String[] args) {
-     DoubleLLoperations dll=new DoubleLLoperations();
+     DoubleLLInsertionOperations dll=new DoubleLLInsertionOperations();
 
        ListNode head;
         head=dll.insertatBeginning(40);
