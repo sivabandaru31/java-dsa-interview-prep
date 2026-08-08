@@ -37,7 +37,20 @@ public class MaxandMinElements {
 
             return min;
         }
+        public static int span(int[] arr) {
+            int max = maxElem(arr);
+            int min = minElem(arr);
 
+        return max - min;
+        }
+
+        public static int[] inverseArray(int[] arr) {
+            int[] ans = new int[arr.length];
+            for (int idx = 0; idx < ans.length; idx++) {
+            ans[arr[idx]] = idx;
+            }
+        return ans;
+        }
         public static void main(String[] args) {
              Scanner scn = new Scanner(System.in);
             System.out.println("Enter array size:");
