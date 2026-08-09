@@ -80,6 +80,9 @@ public class DeleteOperationsDLL {
             System.out.println("List is empty cant delete");
             return head;
         }
+        if(pos<0){
+            System.out.println("position in not valid");
+        }
         if(head.next==null || pos==1){
            return  deleteFromBeginning();
         }
@@ -109,6 +112,36 @@ public class DeleteOperationsDLL {
         return head;
 
     }
+    public  ListNode deleteAtSpecficValue(int val){
+
+        if(head==null){
+            System.out.println("List is empty cant delete");
+            return head;
+        }
+
+        if(head.data==val){
+            return deleteFromBeginning();
+        }
+
+        ListNode temp=head;
+        while(temp!=null && temp.data!=val){
+            temp=temp.next;
+        }
+        if(temp==null){
+            System.out.println("no such value exist in this list.so cant delete");
+            return head;
+        }
+        ListNode prevNode=temp.prev;
+        prevNode.next=temp.next;
+        if(temp.next!=null){
+            temp.next.prev=prevNode;
+            temp.next=null;
+        }
+        temp.prev=null;
+        size--;
+        return head;
+
+    }
     public static void main(String[] args) {
         DeleteOperationsDLL deleteDll=new DeleteOperationsDLL();
         ListNode head;
@@ -121,7 +154,8 @@ public class DeleteOperationsDLL {
 //         deleteDll.traverseDll();
 //         head=deleteDll.deleteFromEnd();
          deleteDll.traverseDll();
-         head=deleteDll.deleteAtSpecficPosition(2);
+         //head=deleteDll.deleteAtSpecficPosition(4);
+        head=deleteDll.deleteAtSpecficValue(30);
          deleteDll.traverseDll();
     }
 }
