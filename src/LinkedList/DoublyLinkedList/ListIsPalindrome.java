@@ -45,10 +45,10 @@ public class ListIsPalindrome {
         public static void main(String[] args) {
             //ListNode head;
             ListNode temp;
-            head = insertBeginning(1);
-            head = insertBeginning(2);
-            head = insertBeginning(2);
-            head = insertBeginning(1);
+             head = insertBeginning(1);
+             head = insertBeginning(2);
+             head = insertBeginning(2);
+             head = insertBeginning(1);
             traversal();
             System.out.println(palindrome());
 
