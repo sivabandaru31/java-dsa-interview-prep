@@ -14,6 +14,16 @@ public class ToggleCaseofEachCharecter {
                 sb.append(ch);
             }
         }
-        System.out.println(sb.toString());
+        System.out.println(sb);
+        //without using built in methods
+//        for(int i=0;i<str.length();i++){
+//            char ch=str.charAt(i);
+//            if(ch >='a' && ch <='z'){
+//                sb.append((char) (ch-'a'+'A'));
+//            }else if(ch>='A' && ch<='Z'){
+//                sb.append((char) (ch-'A'+'a'));
+//            }
+//        }
+//        System.out.println(sb);
     }
 }
