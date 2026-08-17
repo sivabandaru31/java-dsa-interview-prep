@@ -1,6 +1,6 @@
 package arrays;
 import java.util.Arrays;
-public class RotatedArray {
+public class RotatedArrayLeetCode189 {
 
         //    static void RotatedARRAY(int[] nums,int target){
 //        int n=nums.length;
