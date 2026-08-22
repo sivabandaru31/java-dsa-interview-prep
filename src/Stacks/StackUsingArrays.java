@@ -1,7 +1,5 @@
 package Stacks;
 
-import java.io.EOFException;
-
 public class StackUsingArrays {
     protected int[] stackarray;
     protected int top;
@@ -64,16 +62,16 @@ public class StackUsingArrays {
 
     public static void main(String[] args) {
         try {
-            StackUsingArrays ob = new StackUsingArrays(5);
-            ob.push(1);//O(1) time complexity amrtized O(1)
-            ob.push(2);//O(1)
-            ob.push(3);//O(1)
-            ob.push(4);//O(1)
-            ob.push(6);//O(1)
-            ob.push(6);//O(n)
-            ob.push(6);//O(1)
-            ob.push(6);//O(1)
-            ob.push(6);//O(1)
+            StackUsingArrays stack= new StackUsingArrays(5);
+            stack.push(1);//O(1) time complexity amrtized O(1)
+            stack.push(2);//O(1)
+            stack.push(3);//O(1)
+            stack.push(4);//O(1)
+            stack.push(6);//O(1)
+            stack.push(6);//O(n)
+            stack.push(6);//O(1)
+            stack.push(6);//O(1)
+            stack.push(6);//O(1)
 //            System.out.println(ob.pop());
 //            System.out.println(ob.pop());
 //            System.out.println(ob.pop());
@@ -82,10 +80,10 @@ public class StackUsingArrays {
 //            System.out.println(ob.pop());
 //            System.out.println(ob.pop());
 //            System.out.println(ob.pop());
-            while(!ob.isempty()){
-                System.out.println(ob.pop());
+            while(!stack.isempty()){
+                System.out.println(stack.pop());
             }
-            System.out.println(ob.peek());
+            System.out.println(stack.peek());
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
