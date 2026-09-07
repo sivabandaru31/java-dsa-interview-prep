@@ -17,7 +17,7 @@ public class Recursioncalls_3 {
         return count+3;
     }
     public static void main(String[] args) {
-        int n=5;
+        int n=7;
         int result=rectree(n);
         System.out.println(result);
 
