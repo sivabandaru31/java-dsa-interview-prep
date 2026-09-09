@@ -2,8 +2,9 @@ package recursion;
 
 import java.util.Scanner;
 
-public class MinimumElmentInArray {
-    public static int[] array(int n, int val, Scanner sc){
+public class MaximumElmentInArray {
+
+    public static int[] array(int n,int val,Scanner sc){
         if(n==0){
             return new int[val];
         }
@@ -12,12 +13,12 @@ public class MinimumElmentInArray {
         return arr;
     }
 
-    public static int min(int[] arr,int idx){
+    public static int max(int[] arr,int idx){
         if(idx==arr.length-1){
             return arr[idx];
         }
-        int max=min(arr,idx+1);
-        if(arr[idx]<max){
+        int max=max(arr,idx+1);
+        if(arr[idx]>max){
             return arr[idx];
         }
         return  max;
@@ -28,9 +29,10 @@ public class MinimumElmentInArray {
         System.out.println("enter size of array");
         int n=sc.nextInt();
         System.out.println("Enter array elements");
-        int[] arr= array(n,n,sc);
-        int result=min(arr,0);
+       int[] arr= array(n,n,sc);
+        int result=max(arr,0);
         System.out.println("maxElement: "+ result);
 
     }
+
 }
