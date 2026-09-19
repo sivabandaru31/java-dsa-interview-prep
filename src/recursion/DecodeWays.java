@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class DecodeWays {
     public static ArrayList<String> decodeWays(String str) {
+        int count=0;
         if (str.length() == 0) {
             ArrayList<String> base = new ArrayList<>();
             base.add("");
@@ -35,36 +36,40 @@ public class DecodeWays {
 
                 ArrayList<String> recAnsForLen2 =
                         decodeWays(str.substring(2));
-
                 for (String s : recAnsForLen2) {
-
                     char letter = (char) ('a' + num - 1);
-
                     myAns.add(letter + s);
                 }
             }
         }
 
-        return myAns;
+        return myAns ;
+    }
+
+    public static int count (ArrayList<String> al) {
+        int cnt = al.size();
+        return  cnt;
     }
 
     public static void main(String[] args) {
 
-        Scanner scn = new Scanner(System.in);
+//        Scanner scn = new Scanner(System.in);
+//
+//        System.out.print("Enter number: ");
+//        String str = scn.next();
+//
+//        ArrayList<String> ans = decodeWays(str);
+//
+//        System.out.println("Decoding ways:");
+//
+//        for (String s : ans) {
+//            System.out.println(s);
+//        }
+//
+//        System.out.println("Total ways = " + ans.size());
+//
+//        scn.close();
 
-        System.out.print("Enter number: ");
-        String str = scn.next();
-
-        ArrayList<String> ans = decodeWays(str);
-
-        System.out.println("Decoding ways:");
-
-        for (String s : ans) {
-            System.out.println(s);
-        }
-
-        System.out.println("Total ways = " + ans.size());
-
-        scn.close();
+        System.out.println(count(decodeWays("1234")));
     }
 }
