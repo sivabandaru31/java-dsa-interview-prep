@@ -6,7 +6,11 @@ public class FloorAndCileValues {
        int ceil=-1;
        for(int i=0;i<arr.length;i++){
            if(arr[i]<=x){
-               floor=arr[i];
+
+
+                floor=arr[i];
+                1
+                '
            }else{
                break;
            }
