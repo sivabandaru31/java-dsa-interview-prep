@@ -8,7 +8,8 @@ public class BinaryTreeMain {
         BinaryTree tree=new BinaryTree();
         Node root;
         root=tree.createTree(sc);
-        System.out.println(root.data);
+        //System.out.println(root.data);
+        tree.displayTree(root,0);
     }
 
 }

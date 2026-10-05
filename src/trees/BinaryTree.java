@@ -28,4 +28,16 @@ public class BinaryTree {
         }
         return newNode;
     }
+
+    void displayTree(Node node,int level){
+        if(node==null){
+            return;
+        }
+        displayTree(node.right,level+1);
+        for(int i=0;i<level;i++){
+            System.out.print ("    ");
+        }
+        System.out.println(node.data);
+        displayTree(node.left,level+1);
+    }
 }
