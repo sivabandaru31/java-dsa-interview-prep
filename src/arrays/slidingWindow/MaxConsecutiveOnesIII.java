@@ -1,6 +1,6 @@
 package arrays.slidingWindow;
 
-public class MaxConsecutiveOnesIIl {
+public class MaxConsecutiveOnesIII {
     public static int longestOnes(int[] nums, int k) {
 
         int zeroCount = 0;
