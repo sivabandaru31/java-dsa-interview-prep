@@ -1,9 +1,8 @@
-package trees;
+package binarytrees;
 
 import java.util.Scanner;
 
-public class BinaryTree {
-
+public class InOrder {
     Node createTree(Scanner sc){
         System.out.println("Enter Node Data(-1 for null)");
         int value=sc.nextInt();
@@ -16,7 +15,7 @@ public class BinaryTree {
         boolean left=sc.nextBoolean();
         if(left){
 
-           newNode.left= createTree(sc);
+            newNode.left= createTree(sc);
         }
 
         //insertion of right chaild
