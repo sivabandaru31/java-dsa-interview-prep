@@ -18,6 +18,7 @@ public class BinaryTreeMain {
         //inorder.displayTree(root,0);
         //inorder.inorderTraversal(root);
         tree.preOrderTraversal(root);
+        tree.postOrderTraversal(root);
 
     }
 

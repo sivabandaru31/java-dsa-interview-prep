@@ -56,4 +56,13 @@ public class BinaryTree {
         preOrderTraversal(node.left);
         preOrderTraversal(node.right);
     }
+
+    void postOrderTraversal(Node node){
+        if(node==null){
+            return;
+        }
+        preOrderTraversal(node.left);
+        postOrderTraversal(node.right);
+        System.out.print(node.data+" ");
+    }
 }
