@@ -11,7 +11,7 @@ public class BinaryTreeMain {
        root=tree.createTree(sc);
 //        //System.out.println(root.data);
         tree.displayTree(root,0);
-        tree.preOrderItrave(root);
+        tree.preOrderIterative(root);
 //        tree.inorderTraversal(root);
         //InOrder inorder=new InOrder();
         //Node root;

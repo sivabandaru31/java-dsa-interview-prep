@@ -62,7 +62,7 @@ public class BinaryTree {
 
 
 
-    void preOrderItrave(Node node){
+    void preOrderIterative(Node node){
         Stack<Node> stack=new Stack<>();
         while(node !=null || !stack.isEmpty()){
             if(node!=null){
