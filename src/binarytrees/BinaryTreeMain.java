@@ -1,5 +1,6 @@
 package binarytrees;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class BinaryTreeMain {
@@ -24,10 +25,17 @@ public class BinaryTreeMain {
 //      Node root=tree.createTree(sc);
 //      tree.levelOrderTraversal(root);
 
-        BinaryTreeLevelOrderTraversal_102 tree=new BinaryTreeLevelOrderTraversal_102();
-         root=tree.createTree(sc);
+//        BinaryTreeLevelOrderTraversal_102 tree=new BinaryTreeLevelOrderTraversal_102();
+//         root=tree.createTree(sc);
+//        tree.dispalyTree(root,0);
+//       tree.levelOrederTraversal(root);
+
+        LevelOrderTraversal tree=new LevelOrderTraversal();
+        root=tree.createTree(sc);
         tree.dispalyTree(root,0);
-       tree.levelOrederTraversal(root);
+      List<List<Integer>> result=  tree.levelOrderTraversal(root);
+        System.out.println(result);
+
 
     }
 

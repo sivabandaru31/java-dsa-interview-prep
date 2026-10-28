@@ -1,7 +1,6 @@
 package binarytrees;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Scanner;
+import java.util.*;
+
 public class LevelOrderTraversal {
     Node createTree(Scanner sc){
         System.out.println("Enter Node Data");
@@ -36,19 +35,31 @@ public class LevelOrderTraversal {
             dispalyTree(node.left,level+1);
         }
     }
-    void levelOrderTraversal(Node root){
-        Queue<Node> q=new LinkedList<>();
-
-        q.add(root);
-        while(!q.isEmpty()){
-            Node currentNode=q.remove();
-            System.out.println(currentNode.data+" ");
-            if(currentNode.left!=null){
-                q.add(currentNode.left);
-            }
-            if(currentNode.right!=null){
-                q.add(currentNode.right);
-            }
+    public  List<List<Integer>> levelOrderTraversal(Node node){
+        List<List<Integer>> list=new ArrayList<>();
+        if(node==null){
+            return list;
         }
+        Queue<Node> q=new LinkedList<>();
+        q.add(node);
+        while(!q.isEmpty()){
+            List<Integer> sublist=new ArrayList<>();
+            int levelsize=q.size();
+
+            for(int i=0;i<levelsize;i++){
+                Node current=q.remove();
+                sublist.add(current.data);
+                if(current.left!=null){
+                    q.add(current.left);
+                }
+                if(current.right!=null){
+                    q.add(current.right);
+                }
+            }
+            list.add(sublist);
+
+        }
+        return list;
     }
+
 }
