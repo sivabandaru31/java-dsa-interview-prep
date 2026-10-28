@@ -3,6 +3,7 @@ package binarytrees;
 import java.util.LinkedList;
 import java.util.Scanner;
 import java.util.Queue;
+import java.util.Stack;
 
 public class BinaryTree {
 
@@ -59,6 +60,26 @@ public class BinaryTree {
         preOrderTraversal(node.right);
     }
 
+
+
+    void preOrderItrave(Node node){
+        Stack<Node> stack=new Stack<>();
+        while(node !=null || !stack.isEmpty()){
+            if(node!=null){
+                System.out.print(node.data+" ");
+                stack.push(node);
+                node=node.left;
+            }
+            else{
+                node=stack.pop();
+                node=node.right;
+            }
+        }
+
+    }
+
+
+
     void postOrderTraversal(Node node){
         if(node==null){
             return;
@@ -82,4 +103,6 @@ public class BinaryTree {
             }
         }
     }
+
+
 }

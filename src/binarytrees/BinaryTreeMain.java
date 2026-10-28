@@ -6,11 +6,12 @@ import java.util.Scanner;
 public class BinaryTreeMain {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-       // BinaryTree tree=new BinaryTree();
+        BinaryTree tree=new BinaryTree();
        Node root;
-       //root=tree.createTree(sc);
+       root=tree.createTree(sc);
 //        //System.out.println(root.data);
-       // tree.displayTree(root,0);
+        tree.displayTree(root,0);
+        tree.preOrderItrave(root);
 //        tree.inorderTraversal(root);
         //InOrder inorder=new InOrder();
         //Node root;
@@ -30,11 +31,13 @@ public class BinaryTreeMain {
 //        tree.dispalyTree(root,0);
 //       tree.levelOrederTraversal(root);
 
-        LevelOrderTraversal tree=new LevelOrderTraversal();
-        root=tree.createTree(sc);
-        tree.dispalyTree(root,0);
-      List<List<Integer>> result=  tree.levelOrderTraversal(root);
-        System.out.println(result);
+//        LevelOrderTraversal tree=new LevelOrderTraversal();
+//        root=tree.createTree(sc);
+//        tree.dispalyTree(root,0);
+//      List<List<Integer>> result=  tree.levelOrderTraversal(root);
+//        System.out.println(result);
+
+
 
 
     }
